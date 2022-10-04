@@ -1,16 +1,23 @@
 package it.giannibombelli.refactor_challenge;
 
+import java.util.List;
+
 public class FizzBuzz implements FizzBuzzInterface {
+    private final List<DivisorAndWord> divisorAndWords;
+
+    public FizzBuzz(List<DivisorAndWord> divisorAndWords) {
+        this.divisorAndWords = divisorAndWords;
+    }
+
     @Override
     public String say(int number) {
-        if (number % 15 == 0) {
-            return "FizzBuzz";
+        var result = "";
+        for (DivisorAndWord divisorAndWord : divisorAndWords) {
+            result += divisorAndWord.getWordOrEmpty(number);
         }
-        if (number % 3 == 0) {
-            return "Fizz";
-        }
-        if (number % 5 == 0) {
-            return "Buzz";
+
+        if (!result.equals("")) {
+            return result;
         }
 
         return String.valueOf(number);

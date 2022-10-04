@@ -2,31 +2,35 @@ package it.giannibombelli.refactor_challenge;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FizzBuzzTest {
+    private final List<DivisorAndWord> divisorAndWords = Arrays.asList(
+            new DivisorAndWord(3, "Fizz"),
+            new DivisorAndWord(5, "Buzz")
+    );
+
     @Test
-    void simpleNumber() {
-        final FizzBuzz fizzBuzz = new FizzBuzz();
+    public void noMatch() {
+        final FizzBuzz fizzBuzz = new FizzBuzz(divisorAndWords);
         assertEquals("1", fizzBuzz.say(1));
         assertEquals("2", fizzBuzz.say(2));
     }
 
     @Test
-    void fizz() {
-        final FizzBuzz fizzBuzz = new FizzBuzz();
+    public void singleMatch() {
+        final FizzBuzz fizzBuzz = new FizzBuzz(divisorAndWords);
         assertEquals("Fizz", fizzBuzz.say(3));
+        assertEquals("Fizz", fizzBuzz.say(3 * 2));
     }
 
     @Test
-    void buzz() {
-        final FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals("Buzz", fizzBuzz.say(5));
-    }
-
-    @Test
-    void fizzBuzz() {
-        final FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals("FizzBuzz", fizzBuzz.say(15));
+    public void multipleMatch() {
+        final FizzBuzz fizzBuzz = new FizzBuzz(divisorAndWords);
+        assertEquals("FizzBuzz", fizzBuzz.say(3 * 5));
+        assertEquals("FizzBuzz", fizzBuzz.say(3 * 5 * 2));
     }
 }
