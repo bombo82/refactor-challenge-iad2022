@@ -1,15 +1,21 @@
+import DivisorAndWord from "./DivisorAndWord";
 import {IFizzBuzz} from "./IFizzBuzz";
 
 export class FizzBuzz implements IFizzBuzz {
+    private readonly divisorAndWords: DivisorAndWord[];
+
+    constructor(divisorAndWords: DivisorAndWord[]) {
+        this.divisorAndWords = divisorAndWords;
+    }
+
     public say(inputNumber: number): string {
-        if (inputNumber % 3 === 0 && inputNumber % 5 === 0) {
-            return "FizzBuzz";
+        let result = "";
+        for (const divisorAndWord of this.divisorAndWords) {
+            result += divisorAndWord.getWordOrEmpty(inputNumber);
         }
-        if (inputNumber % 3 === 0) {
-            return "Fizz";
-        }
-        if (inputNumber % 5 === 0) {
-            return "Buzz";
+
+        if (result !== "") {
+            return result;
         }
 
         return String(inputNumber);
