@@ -4,10 +4,16 @@ namespace test;
 
 public class FizzBuzzTests
 {
-    [Test]
-    public void Simple_Number()
+    private readonly DivisorAndWord[] _divisorAndWords = new[]
     {
-        var fizzBuzz = new FizzBuzz();
+        new DivisorAndWord(3, "Fizz"),
+        new DivisorAndWord(5, "Buzz"),
+    };
+
+    [Test]
+    public void No_Match()
+    {
+        var fizzBuzz = new FizzBuzz(_divisorAndWords);
         Assert.Multiple(() =>
         {
             Assert.That(fizzBuzz.Say(1), Is.EqualTo("1"));
@@ -16,23 +22,24 @@ public class FizzBuzzTests
     }
 
     [Test]
-    public void Fizz()
+    public void SingleMatch()
     {
-        var fizzBuzz = new FizzBuzz();
-        Assert.That(fizzBuzz.Say(3), Is.EqualTo("Fizz"));
+        var fizzBuzz = new FizzBuzz(_divisorAndWords);
+        Assert.Multiple(() =>
+        {
+            Assert.That(fizzBuzz.Say(3), Is.EqualTo("Fizz"));
+            Assert.That(fizzBuzz.Say(3 * 2), Is.EqualTo("Fizz"));
+        });
     }
 
     [Test]
-    public void Buzz()
+    public void MultipleMatch()
     {
-        var fizzBuzz = new FizzBuzz();
-        Assert.That(fizzBuzz.Say(5), Is.EqualTo("Buzz"));
-    }
-
-    [Test]
-    public void FizzBuzz()
-    {
-        var fizzBuzz = new FizzBuzz();
-        Assert.That(fizzBuzz.Say(15), Is.EqualTo("FizzBuzz"));
+        var fizzBuzz = new FizzBuzz(_divisorAndWords);
+        Assert.Multiple(() =>
+        {
+            Assert.That(fizzBuzz.Say(3 * 5), Is.EqualTo("FizzBuzz"));
+            Assert.That(fizzBuzz.Say(3 * 5 * 2), Is.EqualTo("FizzBuzz"));
+        });
     }
 }

@@ -2,21 +2,24 @@ namespace csharp;
 
 public class FizzBuzz : IFizzBuzz
 {
+    private readonly DivisorAndWord[] _divisorAndWords;
+
+    public FizzBuzz(DivisorAndWord[] divisorAndWords)
+    {
+        this._divisorAndWords = divisorAndWords;
+    }
+
     public string Say(int number)
     {
-        if (number % 3 == 0 && number % 5 == 0)
+        var result = "";
+        foreach (var divisorAndWord in _divisorAndWords)
         {
-            return "FizzBuzz";
+            result += divisorAndWord.GetWordOrEmpty(number);
         }
 
-        if (number % 3 == 0)
+        if (result != "")
         {
-            return "Fizz";
-        }
-
-        if (number % 5 == 0)
-        {
-            return "Buzz";
+            return result;
         }
 
         return number.ToString();
