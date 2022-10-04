@@ -5,28 +5,29 @@ import org.junit.jupiter.api.Test
 
 internal class FizzBuzzTest {
 
+    private val divisorAndWords = listOf(
+        DivisorAndWord(3, "Fizz"),
+        DivisorAndWord(5, "Buzz")
+    )
+
     @Test
-    internal fun simpleNumber() {
-        val fizzBuzz = FizzBuzz()
+    internal fun noMatch() {
+        val fizzBuzz = FizzBuzz(divisorAndWords)
         assertEquals("1", fizzBuzz.say(1))
         assertEquals("2", fizzBuzz.say(2))
     }
 
     @Test
-    internal fun fizz() {
-        val fizzBuzz = FizzBuzz()
+    internal fun singleMatch() {
+        val fizzBuzz = FizzBuzz(divisorAndWords)
         assertEquals("Fizz", fizzBuzz.say(3))
+        assertEquals("Fizz", fizzBuzz.say(3 * 2))
     }
 
     @Test
-    internal fun buzz() {
-        val fizzBuzz = FizzBuzz()
-        assertEquals("Buzz", fizzBuzz.say(5))
-    }
-
-    @Test
-    internal fun fizzBuzz() {
-        val fizzBuzz = FizzBuzz()
-        assertEquals("FizzBuzz", fizzBuzz.say(15))
+    internal fun multipleMatch() {
+        val fizzBuzz = FizzBuzz(divisorAndWords)
+        assertEquals("FizzBuzz", fizzBuzz.say(3 * 5))
+        assertEquals("FizzBuzz", fizzBuzz.say(3 * 5 * 2))
     }
 }
