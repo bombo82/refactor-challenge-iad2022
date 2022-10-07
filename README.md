@@ -26,12 +26,36 @@ Questa regola è sempre valida indipendentemente dal periodo e da quanto spende 
 La regola è il _comportamento_; soglie, periodo e percentuali di sconto sono i _dati_. Come accade nel mondo reale, anche nel nostro programma, è bene che _comportamenti_ e _dati_ siano separati. Questo perché i _dati_ possono _cambiare_, proprio come cambiano le soglie che attivano sconti diversi nell'esempio, ma il _comportamento_ resta _invariato_ rispetto ai dati. 
 
 ## Refactoring
+"Refactoring" significa migliorare la struttura interna del codice di un programma esistente, preservandone il _comportamento_ esterno.
 
-## Challenge
+Con il termine "refactoring" si intendono pertanto  tutte quelle tecniche che hanno come obiettivo il miglioramento del design del codice esistente. Queste tecniche si applicano in passi che devono essere *piccoli abbastanza* per mantenere il _comportamento_ del codice che si sta modificando: "too small to be worth doing". 
+
+La ristrutturazione del codice esistente in piccoli passi *riduce il rischio* d'introdurre errori e quindi di rompere il sistema. Per basi di codice di grandi dimensioni, procedere gradualmente permette di eseguire refactoring che possono durare per un lungo periodo di tempo.
+
+Alcune delle tecniche che rispondo alla descrizione sono ad esempio l'estrazione di un metodo, eseguire un inline di una variabile, l'introduzione di un paramento in un metodo privato, etc.
+
+"Refactoring" quindi *non* significa:
+- riscrivere il codice
+- risolvere bug
+- migliorare parti osservabili del codice, come ad esempio le interfacce verso l'esterno
+
+Fare "refactoring" senza _rete di protezione_ è decisamente rischioso: test unitari e di accettazione automatizzati sono indispensabili per procedere.
+
+Alcuni benefici per i quali si fa "refactoring" sono:
+- diminuire la lunghezza di metodi e classi
+- rimuovere duplicazioni
+- aumentare la coesione, diminuire l'accoppiamento
+- ridurre la complessità ciclomatica (numero di cammini linearmente indipendenti)
+- aumentare la leggibilità del codice
+- favorire l'identificazione di metodi, oggetti, moduli riutilizzabili
+- riconoscere problemi noti e applicare soluzioni note (design pattern)
+- accrescere la manutenibilità del codice
 
 ## Struttura del repository
 
 ## Qualche smell
+
+## Challenge
 
 ## AGENDA
 * 14.30 -> 15.15 : intro + presentazione + creazione delle coppie
