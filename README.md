@@ -16,13 +16,22 @@ Le soluzioni migliori non si limitano a "funzionare", ma rispettano i principi d
 Il  "behaviour" o "comportamento" è direttamente e strettamente legato al problema da risolvere. Una regola di business è un comportamento e non varia al variare dei dati.
 Ad esempio, un’organizzazione può avere una politica per offrire ai clienti che spendono $5.000 in un anno solare uno sconto sugli acquisti una volta raggiunta tale soglia. La regola potrebbe essere: 
 
-> Se un cliente spende più di x EUR in qualsiasi anno solare, allora offrire uno sconto del y% su ogni elemento. 
+> Se un cliente spende più di <soglia_in_divisa> in un <periodo_di_tempo>, allora offrire uno sconto del <sconto_da_applicare>% su ogni elemento. 
 
-Questa regole è sempre valida indipendentemente da quanto spende il cliente: quello che potrà variare sono le soglie di spesa e la percentuale di sconto applicata. La regola è il _comportamento_; soglie e percentuali di sconto sono i _dati_. Come accade nel mondo reale, anche nel nostro programma, è bene che _comportamenti_ e _dati_ siano separati. Questo perché i _dati_ possono _cambiare_, proprio come cambiano le soglie che attivano sconti diversi nell'esempio, ma il _comportamento_ resta _invariato_ rispetto ai dati. 
+Questa regola è sempre valida indipendentemente dal periodo e da quanto spende il cliente: quello che potrà variare sono:
+- le soglie di spesa
+- il periodo nel quale calcolare la soglia
+- la percentuale di sconto applicata. 
+
+La regola è il _comportamento_; soglie, periodo e percentuali di sconto sono i _dati_. Come accade nel mondo reale, anche nel nostro programma, è bene che _comportamenti_ e _dati_ siano separati. Questo perché i _dati_ possono _cambiare_, proprio come cambiano le soglie che attivano sconti diversi nell'esempio, ma il _comportamento_ resta _invariato_ rispetto ai dati. 
 
 ## Refactoring
 
 ## Challenge
+
+## Struttura del repository
+
+## Qualche smell
 
 ## AGENDA
 * 14.30 -> 15.15 : intro + presentazione + creazione delle coppie
