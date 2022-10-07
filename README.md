@@ -72,7 +72,15 @@ Qualche esempio di "smell" *tra* le classi:
 - **Shotgun Surgery/Solution Sprawl**: il codice soffre di questo smell quando un cambiamento ad esso implica un cambiamento in molte altre classi. L'estrazione di un metodo, lo spostamento di un campo oppure eseguire un inline di una classe sono alcune delle mosse di refactoring utilizzate per eliminare questo smell.
 
 ## Struttura del repository
+Il repository presenta due branch:
+- **main**: il branch principale nonché il punto di partenza della sfida
+- **target**: il punto di arrivo della sfida o quello al quale ispirarsi
 
+Sono presenti i sorgenti per diversi linguaggi di programmazione:
+- **Java**: linguaggio orientato agli oggetti, main stream, che trova applicazione in una vasta serie di ambienti. Java è utilizzato dagli smartphone agli ambienti distribuiti, passando anche in IoT.
+- **C# (C-Sharp)**: linguaggio orientato agli oggetti creato da Microsoft, che unisce la potenza computazione di *C++*, la facilità di programmazione di *Visual Basic* e diverse feature di *Java*
+- **Kotlin**: linguaggio di programmazione orientato agli oggetti, staticamente tipizzato, gira sulla Java Virtual Machine (JVM) e completamente interoperabile con Java. Creato da Jet Brains, è un lignuaggio moderno che unisce molte delle feature più amate di linguaggi come Java, Ruby, Scala, etc.
+- **typescript**: linguaggio di programmazione orientato agli oggetti, staticamente tipizzato e compilato. *“TypeScript is JavaScript for application-scale development.”*
 
 ## Challenge
 
