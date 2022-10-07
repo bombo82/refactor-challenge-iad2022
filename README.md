@@ -9,7 +9,7 @@ La richiesta è semplice:
 > - "Buzz" se il numero è multiplo di 5
 > - "FizzBuzz" se il numero è divisibile sia per 3 che per 5
 
-Ci sono diverse strade per raggiungere l'obiettivo, ma alcune sono meglio di altre.
+Ci sono diverse strade per raggiungere l'obiettivo, ma alcune sono migliori di altre.
 Le soluzioni migliori non si limitano a "funzionare", ma rispettano i principi della "buona programmazione", sono aperte al cambiamento e adottato i punti di forza del linguaggio utilizzato.
 
 ## Behaviour Change
@@ -60,12 +60,12 @@ I "code smell" sono tantissimi: almeno un centinaio e si dividino sostanzialment
 
 Qualche esempio di "smell" **dentro** le classi:
 - **Primitive Obsession**: usando troppi tipi primitivi si rischia di nascondere l'intento del codice. Estrarre classi, sostituire i primitivi con degli oggetti sono alcune delle mosse di refactoring utilizzate per eliminare questo smell.
-- **Duplicated Code**: la duplicazione si può presentare in diverse forme. Ci posso essere linee di codice duplicate oppure metodi duplicati nella stessa classe o in classi diverse. L'estrazione di un metodo o di una classe oppure spostare un metodo in un super classe sono alcune delle mosse di refactoring utilizzate per eliminare questo smell.
-- **Comments**: i commenti posso spiegare l'intento di un pezzo di codice ma in realtà il segno di nomi poco parlanti, metodi troppo lunghi, codice poco leggibile. L'estrazione di un metodo oppure l'utilizzo di nomi appropriati sono alcune delle mosse di refactoring utilizzate per eliminare questo smell.
+- **Duplicated Code**: la duplicazione si può presentare in diverse forme. Ci possono essere linee di codice simili oppure classi con nomi che si assomigliano che esprimo lo stesso intento. L'estrazione di un metodo o di una classe oppure spostare un metodo in un super classe sono alcune delle mosse di refactoring utilizzate per eliminare questo smell.
+- **Comments**: i commenti posso spiegare l'intento di un pezzo di codice ma sono in realtà il segno di nomi poco parlanti, metodi troppo lunghi, codice poco leggibile. L'estrazione di un metodo oppure l'utilizzo di nomi appropriati sono alcune delle mosse di refactoring utilizzate per eliminare questo smell.
 - **Long Method**: un metodo troppo lungo è difficile da leggere e da comprendere perché ricco di dettagli. Metodi troppo lunghi tendono a nascondere la duplicazione e a essere pieni di **Primitive Obsession**. Meglio optare per metodi brevi, con nomi espressivi che aiutino a comprendere velocemente ciò che il metodo fa. La sostituzione di un metodo con un oggetto, la decomposizione delle condizioni o l'estrazione di un metodo sono alcune delle mosse di refactoring utilizzate per eliminare questo smell.
 - **Switch Statements**: lo switch può essere un costrutto ottimo col paradigma procedurale ma non lo è in alcun modo col paradigma ad oggetti. La sostituzione delle condizioni col polimorfismo, l'introduzione di _Null Object_, la sostituzione con sotto classi o stati o strategie sono alcune delle mosse di refactoring utilizzate per eliminare questo smell.
 
-Qualche esempio di "smell" *tra* le classi:
+Qualche esempio di "smell" **tra** le classi:
 - **Data Clumps**: liste di campi o parametri o entrambi, ripetute. Questo "smell" non è sempre di facile individuazione poiché i nomi dei campi e dei parametri posso essere diversi anche quando il loro scopo é lo stesso. Prima di procedere alle mosse di refactoring per elimanare questo smell potrebbe essere necessario rinominare campi e parametri.
 - **Feature Envy**: un comportamento che sembra più interessato ai dati di un'altra classe che alla classe che lo contiene. L'estrazione o lo spostamento di un metodo ono alcune delle mosse di refactoring utilizzate per eliminare questo smell.
 - **Message Chains/Train Wrecks**: `obcject.getThis().getThat().getSuch().doSth()` è un esempio di questo "smell" che rende un oggetto dipendente da tutti gli oggetti presenti nella catena di invocazione dei metodi. L'estrazione di o il rinominare un metodo sono alcune delle mosse di refactoring utilizzate per eliminare questo smell.
