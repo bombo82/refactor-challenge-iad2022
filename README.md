@@ -83,6 +83,17 @@ Sono presenti i sorgenti per diversi linguaggi di programmazione:
 - **typescript**: linguaggio di programmazione orientato agli oggetti, staticamente tipizzato e compilato. *“TypeScript is JavaScript for application-scale development.”*
 
 ## Challenge
+Come sviluppatore, ho sempre avuto difficoltà a scrivere codice in cui i _behaviour_ e i dati sono disaccoppiati. Il TDD mi ha aiutato solo in piccola parte e, solitamente, mi ritrovavo a fare _refactor_ per disaccoppiare i _behaviour_ dai dati.
+La difficoltà più grossa che incontro facendo _refactor_ è fare "piccoli passi" incrementali che non rompono i test. Nel 2019 mi sono messo a studiare tecniche e metodi di _refactor_ e inizialmente faticavo molto a fare i _refactor_ in piccoli passi e mi sono un po' demoralizzato. Alla conferenza Agile Venture Firenze ho visto Massimo Iacolare che faceva proprio quello che io non riuscivo e questo mi ha dato forza e motivazione per impegnarmi a migliorare.
+
+Sempre nel 2019 ho iniziato a fare il coach tecnico, scoprendo che le mie difficoltà erano abbastanza comuni e ho trovato un "hook" per aiutare gli altri battere il "boss monster" del _refactor_! Ci vuole una motivazione così grande che solo una sfida ti può dare e nelle sessioni di coaching ho iniziato a proporre sfide di refactor del tutto simili a questa.
+
+In cosa consiste la sfida?
+Trasformare il codice iniziale in una versione __target__ predefinita, tramite semplici e piccoli passi di refactor. Ogni volta che viene modificata una riga i test devono rimanere verdi e il codice appena scritto deve sostituire la precedente versione il prima possibile, andando effettivamente in produzione. Facciamo un commit per ogni mossa di _refactor_ che porta valore al codice e che sia "unitaria". Ogni commit può essere una singola riga di codice oppure più righe e chi riesce a fare più commit vince! Ogni commit che non porta valore non viene contato, mentre se un commit rompe dei test vale -10.
+
+__Lo spirito dello IAD è la condivisione e discussione NON la competizione__. Alla fine di questo workshop non conteremo i commit e non redigeremo un classifica, ma proveremo a fare il _refactor_ tutti assieme in __mob programming__.
+
+Il carattere di sfida rimane, ma al posto di essere contro gli altri partecipanti sarà contro se stessi! Vi assicuro che fare _refactor_ a "piccoli passi" non è cosa banale e rendersi conto che è possibile e riuscire a farlo per la prima volta è una grande vittoria che può fornire la motivazione per provare a farlo quotidianamente.
 
 ## AGENDA
 * 14.30 -> 15.15 : intro + presentazione + creazione delle coppie
